@@ -66,8 +66,8 @@ $email = $_POST['email'];
                         <span><input type="checkbox">Remember me</span><a href="#">Forgot Password</a>
                     </div>
                     <?php
-                    $length = 8;
-                    $_Number =  substr(str_shuffle('0123456789AaBaCc@D$eE!GgF#JkLpVW'), 1, $length);
+                    $size = 6;
+                    $_Number =  substr(str_shuffle('0123456789AaBaCc@D$eE!GgF#JkLpVW'), 1, $size);
                     ?>
                     <input type="button" value="Generate OTP" class="magex"id="magex"  name = "login"><input type="text" class="gotp" value="<?php echo $_Number ?>">
 
