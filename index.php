@@ -46,13 +46,13 @@ $email = $_POST['email'];
 
                     <div class="input-box">
                         <ion-icon name="person-circle-outline"></ion-icon>
-                        <input type="text" name = "name" required>
+                        <input type="text" name = "name" required autocomplete="off">
                         <label for="name">Name</label>
                     </div>
 
                     <div class="input-box">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" name = "email" required>
+                        <input type="email" name = "email" required autocomplete="off">
                         <label for="email">Email</label>
                     </div>
                     
@@ -63,7 +63,7 @@ $email = $_POST['email'];
                     </div>
 
                     <div class="forget">
-                        <span><input type="checkbox">Remember me</span><a href="#">Forgot Password</a>
+                        <span class="span"><input type="checkbox">Remember me</span><a href="#">Forgot Password</a>
                     </div>
                     <?php
                     $size = 6;
