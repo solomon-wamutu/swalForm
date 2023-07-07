@@ -65,17 +65,10 @@ $email = $_POST['email'];
                     <div class="forget">
                         <span class="span"><input type="checkbox">Remember me</span><a href="#">Forgot Password</a>
                     </div>
-                    <?php
-                    $size = 6;
-                    $_Number =  substr(str_shuffle('0123456789AaBaCc@D$eE!GgF#JkLpVW'), 1, $size);
-                    ?>
-                    <input type="button" value="Generate OTP" class="magex"id="magex"  name = "login"><input type="text" class="gotp" value="<?php echo $_Number ?>">
+                    
+                    <input type="button" onclick="generate();" value="Generate OTP" class="magex" id="magex" name="generate"><input type="text" name="" id="otp" class="gotp">
 
                     <br>
-                    <!-- <div class="input-box">
-                        <button id = "input-box">Generate OTP</button>
-                    </div> -->
-
                     <input type="submit" value="Login" class="magex" name = "login">
                         <div class="register">
                             <p>Don't have an account <a href="#">Register</a></p>
@@ -92,16 +85,26 @@ $email = $_POST['email'];
         </div>
     </section>
     <script>
-         const button = document.querySelector('.magex');
-        button.addEventListener('click' ,() =>
-                {
-                    button.classList.toggle('clicked');
-                }
-        )
+                    // function generate(){
+                    //     var otp;
+                    //     otp = Math.floor(100000 + Math.random() * 900000);
+                    //     document.getElementById("got").value = otp;
+                    //      $size = 8;
+                    //      $_Number =  substr(str_shuffle('0123456789AaBaCc@D$eE!GgF#JkLpVW'), 1, $size);
+                
+                        //  }
+        
+        //  const button = document.querySelector('.magex');
+        // button.addEventListener('click' ,() =>
+        //         {
+        //             button.classList.toggle('clicked');
+        //         }
+        // )
         </script>
     <script src="./swal.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./file.js"></script>
 <script src="./js/swal.js"></script>
 </body>
 </html>

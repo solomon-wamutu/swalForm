@@ -192,3 +192,8 @@ a{
     border-radius: 5px;
     color: white; 
  } 
+
+ #otp{
+    border-bottom: 2px solid white;
+    background-color: transparent;
+ }
