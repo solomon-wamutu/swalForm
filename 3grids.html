@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas-container {
+  position: relative;
+}
+
+#myCanvas {
+  border: 1px solid black; /* Optional border around the canvas */
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0, 0, 0, 0.2) 20px, rgba(0, 0, 0, 0.2) 21px);
+  pointer-events: none; /* Allows interactions with the canvas beneath */
+}
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="myCanvas" width="400" height="400"></canvas>
+      </div>
+      <script>
+        const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+// Draw a grid
+const gridSize = 20; // Adjust this value to change the grid size
+ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+
+for (let x = 0; x < canvas.width; x += gridSize) {
+  ctx.beginPath();
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, canvas.height);
+  ctx.stroke();
+}
+
+for (let y = 0; y < canvas.height; y += gridSize) {
+  ctx.beginPath();
+  ctx.moveTo(0, y);
+  ctx.lineTo(canvas.width, y);
+  ctx.stroke();
+}
+      </script>
+</body>
+</html>

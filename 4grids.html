@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the canvas and add some spacing */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Set the background color of the container */
+}
+
+/* Style the canvas */
+#myCanvas {
+    border: 1px solid black; /* Add a border to the canvas */
+    background-color: white; /* Set the background color of the canvas */
+}
+
+/* Create the alternating grid pattern */
+#myCanvas::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        black,
+        black 10px,
+        white 10px,
+        white 20px
+    );
+    mix-blend-mode: multiply; /* Blend the grid with the canvas */
+}
+    </style>
+    <title>Grids around Canvas</title>
+</head>
+<body>
+    <div class="grid-container">
+        <canvas id="myCanvas"></canvas>
+    </div>
+    <script>
+                const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+// Draw a grid
+const gridSize = 20; // Adjust this value to change the grid size
+ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+
+for (let x = 0; x < canvas.width; x += gridSize) {
+  ctx.beginPath();
+  ctx.moveTo(x, 0);
+  ctx.lineTo(x, canvas.height);
+  ctx.stroke();
+}
+
+for (let y = 0; y < canvas.height; y += gridSize) {
+  ctx.beginPath();
+  ctx.moveTo(0, y);
+  ctx.lineTo(canvas.width, y);
+  ctx.stroke();
+}
+    </script>
+</body>
+</html>

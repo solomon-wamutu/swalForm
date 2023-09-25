@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids around Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    width: 300px; /* Adjust the canvas size as needed */
+    height: 300px;
+    border-radius: 15px; /* Rounded borders for the canvas */
+    border: 2px solid black; /* Optional border for the canvas */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Adjust the gap between grids as needed */
+    margin-top: 10px; /* Add space between the canvas and grids */
+}
+
+.grid {
+    width: 40px; /* Adjust the size of each grid as needed */
+    height: 40px;
+    background-color: lightgray; /* Background color of the grids */
+    border-radius: 10px; /* Rounded borders for the grids */
+    border: 1px solid gray; /* Optional border for the grids */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="myCanvas"></canvas>
+        <div class="grid-container">
+            <!-- Create 6x6 grids using div elements -->
+            <!-- Repeat this block 36 times to create all grids -->
+            <div class="grid"></div>
+            <!-- Repeat this block 36 times to create all grids -->
+        </div>
+    </div>
+</body>
+</html>
+
+

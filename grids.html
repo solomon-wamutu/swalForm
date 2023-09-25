@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Grid</title>
+</head>
+<body>
+    <canvas id="grid-canvas" width="400" height="400"></canvas>
+    <!-- <script src="script.js"></script> -->
+    <script>
+const canvas = document.getElementById("grid-canvas");
+const ctx = canvas.getContext("2d");
+
+// Set the grid size and spacing
+const gridSize = 5; // Adjust this value to change the grid size
+const gridSpacing = 60; // Adjust this value to change the spacing between grid lines
+
+// Function to draw the grid
+function drawGrid() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Set the line color and width
+    ctx.strokeStyle = "gray";
+    ctx.lineWidth = 1;
+
+    // Draw vertical grid lines
+    for (let x = gridSpacing; x < canvas.width; x += gridSpacing) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+    }
+
+    // Draw horizontal grid lines
+    for (let y = gridSpacing; y < canvas.height; y += gridSpacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+    }
+}
+
+// Call the drawGrid function to draw the grid initially
+drawGrid();
+    </script>
+</body>
+</html>
