@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the alternate table */
+.alternate-table {
+    width: 50%; /* Adjust the table width as needed */
+    margin: 50px auto; /* Center the table */
+    border-collapse: collapse;
+}
+
+/* Style the table cells (td) */
+.alternate-table td {
+    width: 50px; /* Adjust the cell width as needed */
+    height: 50px; /* Adjust the cell height as needed */
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Alternating red and green backgrounds */
+.alternate-table tr:nth-child(odd) td:nth-child(odd),
+.alternate-table tr:nth-child(even) td:nth-child(even) {
+    background-color: red;
+}
+
+.alternate-table tr:nth-child(odd) td:nth-child(even),
+.alternate-table tr:nth-child(even) td:nth-child(odd) {
+    background-color: green;
+}
+    </style>
+    <title>Alternate Red and Green Table</title>
+</head>
+<body>
+    <table class="alternate-table">
+        <tbody>
+            <!-- Rows -->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
